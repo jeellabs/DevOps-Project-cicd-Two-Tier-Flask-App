@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two Tier Flask App</title>
+</head>
+<body>
+    <h1>Flask + MySQL App 🚀</h1>
+
+    <!-- Message Submit Form -->
+    <form method="POST" action="/submit">
+        <input type="text" name="new_message" placeholder="Enter your message">
+        <!--                ↑↑↑↑↑↑↑↑↑↑↑↑↑
+                        EXACTLY yahi naam chahiye -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Saved Messages Display -->
+    <h2>Messages:</h2>
+    {% for msg in messages %}
+        <p>{{ msg[0] }}</p>
+    {% endfor %}
+
+</body>
+</html>
